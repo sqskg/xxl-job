@@ -1,7 +1,6 @@
 package com.xxl.job.admin.dao;
 
 import com.xxl.job.admin.core.model.XxlJobInfo;
-import com.xxl.job.admin.dao.XxlJobInfoDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -20,8 +19,8 @@ public class XxlJobInfoDaoTest {
 	
 	@Test
 	public void pageList(){
-		List<XxlJobInfo> list = xxlJobInfoDao.pageList(0, 20, 0, null, null);
-		int list_count = xxlJobInfoDao.pageListCount(0, 20, 0, null, null);
+		List<XxlJobInfo> list = xxlJobInfoDao.pageList(0, 20, 0, -1, null, null, null);
+		int list_count = xxlJobInfoDao.pageListCount(0, 20, 0, -1, null, null, null);
 		
 		System.out.println(list);
 		System.out.println(list_count);
@@ -41,7 +40,6 @@ public class XxlJobInfoDaoTest {
 		info.setExecutorHandler("setExecutorHandler");
 		info.setExecutorParam("setExecutorParam");
 		info.setExecutorBlockStrategy("setExecutorBlockStrategy");
-		info.setExecutorFailStrategy("setExecutorFailStrategy");
 		info.setGlueType("setGlueType");
 		info.setGlueSource("setGlueSource");
 		info.setGlueRemark("setGlueRemark");
@@ -58,7 +56,6 @@ public class XxlJobInfoDaoTest {
 		info2.setExecutorHandler("setExecutorHandler2");
 		info2.setExecutorParam("setExecutorParam2");
 		info2.setExecutorBlockStrategy("setExecutorBlockStrategy2");
-		info2.setExecutorFailStrategy("setExecutorFailStrategy2");
 		info2.setGlueType("setGlueType2");
 		info2.setGlueSource("setGlueSource2");
 		info2.setGlueRemark("setGlueRemark2");
